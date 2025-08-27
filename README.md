@@ -64,7 +64,7 @@ NethuesChatboxWebApp/ ├── Controllers/ ├── Models/ ├── Service
 ## 🛠️ Getting Started
 
 1. Clone the repository  
-   `git clone https://github.com/your-username/SecureMvcJwt.git`
+   `git clone https://github.com/sumitchaddha/NethuesChatboxWebAppProject.git`
 
 2. Update your `appsettings.json` with a secure JWT key and SQLite path
 
