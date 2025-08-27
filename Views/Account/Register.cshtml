@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@model RegisterDto
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center w-50 mx-auto">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center vw-100">
+        <div class="col-md-5 d-flex flex-column text-center">
+            <h2 class="fw-bolder my-2">Create an account</h2>
+            <p class="">Welcome to FlickUp - Let's create account</p>
+          
+            <form asp-controller="Account" asp-action="Register" method="post" class="d-flex flex-column g-0 mt-3 align-items-center form-parent">
+
+                <div class="form-group w-75 d-flex justify-content-between gap-3">
+                    <div class="w-50">
+                        <input asp-for="FirstName" class="form-control py-3 px-3" id="FirstName" placeholder="First Name" required />
+                        <span asp-validation-for="FirstName" class="text-danger d-block mt-1"></span>
+                    </div>
+                    <div class="w-50">
+                        <input asp-for="LastName" class="form-control py-3 px-3" id="LastName" placeholder="Last Name" required />
+                        <span asp-validation-for="LastName" class="text-danger d-block mt-1"></span>
+                    </div>
+                </div>
+
+                <div class="form-group w-75 password-icon ">
+                    <label asp-for="Email"><i class="bi bi-envelope-at-fill mx-1"></i></label>
+                    <input asp-for="Email" class="form-control py-3 px-5" id="email" placeholder="Email" required />
+                    <span asp-validation-for="Email" class="text-danger d-block mt-1"></span>
+                </div>
+
+                <div class="form-group w-75 password-icon" >
+                    <label asp-for="Password"><i class="bi bi-shield-lock-fill mx-1"></i></label>
+                    <input asp-for="Password" type="password" class="form-control py-3 px-5" id="password" placeholder="Password" required />
+                    <span asp-validation-for="Password" class="text-danger d-block mt-1"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block w-75 py-3 mt-3">Create Account</button>
+            </form>
+
+
+            <div class="d-flex mx-auto justify-content-center align-items-center">
+                <span class="my-2 py-0 pe-2">Already have an account?</span><a href="@Url.Action("Login", "Account")" class="link-primary">Log in</a>
+            </div>
+
+        </div>
+    </div>
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</div>

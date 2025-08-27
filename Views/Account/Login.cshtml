@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+@model LoginDto
+
+<div class="container">
+        <div class="row justify-content-center align-items-center vw-100 h-75">
+        <div class="col-md-5 d-flex flex-column text-center">
+                <h2 class="px-8 pb-2 fw-bolder">Log In to your Account</h2>
+                <p class="px-8">Welcome Back! Enter Details to Login:</p>
+
+            <form asp-action="Login" method="post" class="d-flex flex-column gap-2 align-items-center form-parent">
+                @* <div class="form-group w-75">
+                    <label asp-for="Username"><i class="bi bi-envelope-at-fill mx-1"></i></label>
+                    <input asp-for="Username" class="form-control py-3 px-5" id="email" placeholder="Email" required>
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group w-75 password-icon">
+                    <label asp-for="PasswordHash"><i class="bi bi-shield-lock-fill mx-1"></i></label>
+                    <input asp-for="PasswordHash" type="password" class="form-control py-3 px-5" id="password" placeholder="Password" required>
+                    <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                </div> *@
+                <div class="form-group w-75 password-icon">
+                    <div class="d-flex align-items-center mb-1">
+                        <label for="email" class="me-2">
+                            <i class="bi bi-envelope-at-fill register-email"></i>
+                        </label>
+                    </div>
+                    <input asp-for="Username" class="form-control py-3 px-5" id="email" placeholder="Email" required />
+                    <span asp-validation-for="Username" class="text-danger d-block mt-1"></span>
+                </div>
+
+                <div class="form-group w-75 password-icon" id="register-password">
+                    <div class="d-flex align-items-center mb-1">
+                        <label for="password" class="me-2">
+                            <i class="bi bi-shield-lock-fill "></i>
+                        </label>
+                    </div>
+                    <input asp-for="PasswordHash" type="password" class="form-control py-3 px-5" id="password" placeholder="Password" required />
+                    <span asp-validation-for="PasswordHash" class="text-danger d-block mt-1"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block w-75 py-3 mt-3">Log in</button>
+            </form>
+
+            <div class="d-flex mx-auto justify-content-center align-items-center">
+                <p class="pe-2 my-0">Don't have an account? </p>
+                <a href="@Url.Action("Register", "Account")" class="link-primary">Create an account</a>
+            </div>
+           
+            </div>
+        </div>
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+    </div>
+

@@ -1,0 +1,192 @@
+html {
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('CothamSans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    margin-bottom: 0px;
+    height: 80vh;
+}
+
+.icon-size {
+    margin-right: 12px;
+}
+
+.custom-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    color: #010B13;
+    font-size: 16px;
+}
+
+.horizontal-line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+    .horizontal-line-text::before, .horizontal-line-text::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #000; /* Adjust color and style as needed */
+    }
+
+    .horizontal-line-text::before {
+        margin-right: 10px; /* Adjust spacing as needed */
+    }
+
+    .horizontal-line-text::after {
+        margin-left: 10px; /* Adjust spacing as needed */
+    }
+
+
+
+#email, #password {
+    font-size: 16px;
+}
+
+.btn {
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+
+.form-check-label {
+    text-align: center;
+    padding-top: 12px;
+    font-size: 16px;
+}
+
+.form-check {
+    margin: 0px;
+    padding: 0px;
+}
+
+#defaultCheck1 {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+p, .horizontal-line-text, .login-back {
+    font-size: 16px;
+    color: #848482;
+}
+
+h2 {
+    color: #010B13;
+    font-size: 24px;
+}
+
+.bi-box-arrow-in-left {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.form-parent {
+    position: relative;
+}
+
+.bi-envelope-at-fill {
+    position: absolute;
+    left: 75px;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+    transform: translateY(225%);
+    font-size: 28px;
+    color: #aaa;
+}
+
+
+.password-icon .bi-shield-lock-fill {
+    position: absolute;
+    left: 75px;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+    transform: translateY(435%);
+    font-size: 28px;
+    color: #aaa;
+}
+#ChgPass-lock .bi-shield-lock-fill {
+    transform: translateY(85%);
+}
+#newPass-lock .bi-shield-lock-fill {
+    transform: translateY(300%);
+}
+
+#forgot-password-icon /*.bi-eye-fill, .bi-eye-slash-fill*/ {
+    position: absolute;
+    left: 90px;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+    transform: translateY(85%);
+    font-size: 30px;
+    color: #aaa;
+}
+
+#forgot-password-conf-icon, #toggleConfPassword {
+    transform: translateY(395%);
+}
+
+.bi-eye-fill, .bi-eye-slash-fill {
+    position: absolute;
+    right: 100px;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+    transform: translateY(85%);
+    font-size: 30px;
+    color: #aaa;
+}
+
+.btn, .form-control {
+    border-radius: 0px;
+}
+
+.register-email {
+    transform: translateY(35%);
+}
+
+#register-password  .bi-shield-lock-fill{
+    transform: translateY(210%);
+}
